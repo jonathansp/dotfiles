@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export HOMEBREW_GITHUB_API_TOKEN=0a8952e35b3e1075ddf1adc05d77e24529bcc5a9
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
