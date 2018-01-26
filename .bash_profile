@@ -40,8 +40,11 @@ export PATH="~/.pyenv:$PATH"
 eval "$(pyenv init -)"
 
 # add nvm
-  export NVM_DIR="$HOME/.nvm"
-  source "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+source "/usr/local/opt/nvm/nvm.sh"
+
+# add go
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
