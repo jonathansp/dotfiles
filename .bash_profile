@@ -35,16 +35,19 @@ if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completio
 	complete -o default -o nospace -F _git g;
 fi;
 
-# add pyenv
+# Add pyenv
 export PATH="~/.pyenv:$PATH"
 eval "$(pyenv init -)"
 
-# add nvm
+# Add nvm
 export NVM_DIR="$HOME/.nvm"
 source "/usr/local/opt/nvm/nvm.sh"
 
-# add go
+# Add go
 export PATH=$PATH:$(go env GOPATH)/bin
+
+# Set default locate/encoding
+export LC_CTYPE="en_US.UTF-8"
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
