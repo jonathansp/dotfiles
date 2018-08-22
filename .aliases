@@ -74,3 +74,7 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Fix mac camera
 alias fix-cam='sudo killall AppleCameraAssistant; sudo killall VDCAssistant'
+
+# Exports hadoop env
+alias hadoop-use-qa='export HADOOP_CONF_DIR=~/conf/hadoop/conf-qa'
+alias hadoop-use-prod='export HADOOP_CONF_DIR=~/conf/hadoop/conf-prod'
