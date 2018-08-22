@@ -16,12 +16,10 @@ export HISTCONTROL='ignoreboth';
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 
-# spark/hadoop
-export HADOOP_HOME=~/bin/hadoop-2.7.1
-export SPARK_HOME=~/bin/spark-2.0.0-bin-hadoop2.7
-export PATH=$PATH:$SPARK_HOME/bin
-export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
-export HADOOP_LIBEXEC_DIR=${HADOOP_HOME}/libexec
-
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Hadoop 2.7.2
+export HADOOP_HOME="/usr/local/Cellar/hadoop/2.7.2"
+export HADOOP_LIBEXEC_DIR=${HADOOP_HOME}/libexec
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
