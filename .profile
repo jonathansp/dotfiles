@@ -19,6 +19,9 @@ export PATH="~/.pyenv:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+export CFLAGS="-L$(brew --prefix zlib)/include -L$(brew --prefix bzip2)/include"
+export LDFLAGS="-L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib"
+
 # Add go to the `$PATH`
 export PATH=$PATH:$(go env GOPATH)/bin
 
