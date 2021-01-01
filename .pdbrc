@@ -1,1 +1,0 @@
-alias killme import os; os.system('kill -9 %d' % os.getpid())

@@ -15,5 +15,5 @@ Thumbs.db
 .Trashes
 
 .extra
-.vscode
+.vscode*
 .python-version
